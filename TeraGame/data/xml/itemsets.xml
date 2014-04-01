@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemsets xmlns="http://angelis.com/itemsets" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://angelis.com/itemsets ../schema/itemsets.xsd "
+>
+    <itemset targetClass="WARRIOR">
+        <item itemId="10001" slot="1" />
+        <item itemId="15004" slot="3" />
+        <item itemId="15005" slot="4" />
+        <item itemId="15006" slot="5" />
+    </itemset>
+    <itemset targetClass="LANCER">
+        <item itemId="10002" slot="1" />
+        <item itemId="15004" slot="3" />
+        <item itemId="15005" slot="4" />
+        <item itemId="15006" slot="5" />
+    </itemset>
+    <itemset targetClass="SLAYER">
+        <item itemId="10003" slot="1" />
+        <item itemId="15001" slot="3" />
+        <item itemId="15002" slot="4" />
+        <item itemId="15003" slot="5" />
+    </itemset>
+    <itemset targetClass="BERSERKER">
+        <item itemId="10004" slot="1" />
+        <item itemId="15001" slot="3" />
+        <item itemId="15002" slot="4" />
+        <item itemId="15003" slot="5" />
+    </itemset>
+    <itemset targetClass="SORCERER">
+        <item itemId="10005" slot="1" />
+        <item itemId="15007" slot="3" />
+        <item itemId="15008" slot="4" />
+        <item itemId="15009" slot="5" />
+    </itemset>
+    <itemset targetClass="ARCHER">
+        <item itemId="10006" slot="1" />
+        <item itemId="15004" slot="3" />
+        <item itemId="15005" slot="4" />
+        <item itemId="15006" slot="5" />
+    </itemset>
+    <itemset targetClass="PRIEST">
+        <item itemId="10007" slot="1" />
+        <item itemId="15007" slot="3" />
+        <item itemId="15008" slot="4" />
+        <item itemId="15009" slot="5" />
+    </itemset>
+    <itemset targetClass="MYSTIC">
+        <item itemId="10008" slot="1" />
+        <item itemId="15007" slot="3" />
+        <item itemId="15008" slot="4" />
+        <item itemId="15009" slot="5" />
+    </itemset>
+</itemsets>

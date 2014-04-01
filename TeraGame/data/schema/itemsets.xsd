@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/itemsets"
+    xmlns:xsd="http://angelis.com/itemsets" xmlns:base="http://angelis.com/base" elementFormDefault="qualified">
+    
+    <!-- IMPORT -->
+    <import schemaLocation="base.xsd" namespace="http://angelis.com/base"/>
+    
+    <!-- TYPES -->
+    <complexType name="ItemType">
+        <attribute name="itemId" type="integer"/>
+        <attribute name="slot" type="integer"/>
+    </complexType>
+    
+    <complexType name="ItemSetType">
+        <sequence>
+            <element name="item" type="xsd:ItemType" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="targetClass" type="base:ClassType"/>
+    </complexType>
+    
+    <complexType name="ItemSetsType">
+        <sequence>
+            <element name="itemset" type="xsd:ItemSetType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="itemsets" type="xsd:ItemSetsType"/>
+</schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiences xmlns="http://angelis.com/experiences" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://angelis.com/experiences ../schema/experiences.xsd "
+>
+    <experience level="1" experience="840" />
+    <experience level="2" experience="1846" />
+    <experience level="3" experience="3048" />
+    <experience level="4" experience="4470" />
+    <experience level="5" experience="6145" />
+    <experience level="6" experience="8113" />
+    <experience level="7" experience="10410" />
+    <experience level="8" experience="13088" />
+    <experience level="9" experience="16197" />
+    <experience level="10" experience="19795" />
+</experiences>

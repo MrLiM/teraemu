@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basestats xmlns="http://angelis.com/basestats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://angelis.com/basestats ../schema/basestats.xsd "
+>
+    <basestat targetClass="WARRIOR" hp="903" mp="100" attack="66" defense="24" speed="120"
+        critChance="50" critResist="80" />
+    <basestat targetClass="LANCER" hp="689" mp="100" attack="49" defense="29" speed="105"
+        critChance="50" critResist="80" />
+    <basestat targetClass="SLAYER" hp="648" mp="100" attack="71" defense="21" speed="110"
+        critChance="75" critResist="40" />
+    <basestat targetClass="BERSERKER" hp="605" mp="100" attack="78" defense="26" speed="105"
+        critChance="75" critResist="40" />
+    <basestat targetClass="SORCERER" hp="582" mp="200" attack="64" defense="12" speed="110"
+        critChance="25" critResist="30" />
+    <basestat targetClass="ARCHER" hp="598" mp="50" attack="81" defense="27" speed="110"
+        critChance="25" critResist="30" />
+    <basestat targetClass="PRIEST" hp="527" mp="250" attack="32" defense="13" speed="110"
+        critChance="20" critResist="25" />
+    <basestat targetClass="MYSTIC" hp="580" mp="200" attack="32" defense="14" speed="110"
+        critChance="20" critResist="25" />
+</basestats>

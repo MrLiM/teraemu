@@ -1,0 +1,22 @@
+<protocol checksumSize="0" crypt="Tera" name="Tera"
+	packetbuffer="DefaultPacketBuffer" port="7811" sizebytes="2"
+	strictlength="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="protocol.xsd">
+	<packetfamilly switchtype="c" way="ServerPackets">
+
+	</packetfamilly>
+	
+	<packetfamilly switchtype="c" way="ClientPackets">
+		<packet name="CM_AUTH" id="0x9CE2">
+			<part name="unk1" type="h" />
+			<part name="unk2" type="h" />
+			<part name="length" type="h" id="0" />
+			<part name="unk3" type="b" size="5" />
+			<part name="unk4" type="d" />
+			<part name="login" type="s" />
+			<for id="0">
+				<part name="password" type="b" />
+			</for>
+		</packet>
+	</packetfamilly>
+</protocol>

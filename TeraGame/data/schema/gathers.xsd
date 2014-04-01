@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/gathers"
+    xmlns:xsd="http://angelis.com/gathers" xmlns:base="http://angelis.com/base" elementFormDefault="qualified"
+>
+    <!-- IMPORTS -->
+    <import schemaLocation="base.xsd" namespace="http://angelis.com/base" />
+    
+    <!-- TYPES -->
+    <complexType name="GatherType">
+        <sequence>
+            <element name="spawn" type="base:BaseSpawnType"  maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="integer" />
+    </complexType>
+    <complexType name="GathersType">
+        <sequence>
+            <element name="gather" type="xsd:GatherType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="gathers" type="xsd:GathersType" />
+</schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/base"
+    xmlns:base="http://angelis.com/base" elementFormDefault="qualified">
+
+    <simpleType name="ClassType">
+        <restriction base="string">
+            <enumeration value="WARRIOR"/>
+            <enumeration value="LANCER"/>
+            <enumeration value="SLAYER"/>
+            <enumeration value="BERSERKER"/>
+            <enumeration value="SORCERER"/>
+            <enumeration value="ARCHER"/>
+            <enumeration value="PRIEST"/>
+            <enumeration value="MYSTIC"/>
+        </restriction>
+    </simpleType>
+   
+    <complexType name="BaseSpawnType">
+        <attribute name="mapId" type="integer"/>
+        <attribute name="x" type="float"/>
+        <attribute name="y" type="float"/>
+        <attribute name="z" type="float"/>
+    </complexType>
+</schema>

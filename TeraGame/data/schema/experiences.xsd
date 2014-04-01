@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/experiences"
+    xmlns:xsd="http://angelis.com/experiences" elementFormDefault="qualified"
+>
+    
+    <!-- IMPORTS -->
+    
+    <!-- TYPES -->
+    <complexType name="ExperienceType">
+        <attribute name="level" type="integer"/>
+        <attribute name="experience" type="integer"/>
+    </complexType>
+    
+    <complexType name="ExperiencesType">
+        <sequence>
+            <element name="experience" type="xsd:ExperienceType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="experiences" type="xsd:ExperiencesType"/>
+</schema>

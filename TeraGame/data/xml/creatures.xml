@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creatures xmlns="http://angelis.com/creatures" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://angelis.com/creatures ../schema/creatures.xsd "
+>
+    <creature id="2" creatureType="13" modelId="3735578" inoffensive="00" speed="12">
+        <spawn mapId="13" x="63880.25" y="-83091.41" z="-3925.0" heading="3431" />
+        <spawn mapId="13" x="63629.742" y="-82252.17" z="-3934.0" heading="-25343" />
+        <spawn mapId="13" x="65297.57" y="-82765.42" z="-3662.0" heading="-2676" />
+        <spawn mapId="13" x="65449.992" y="-82809.945" z="-3665.0" heading="5449" />
+        <spawn mapId="13" x="64130.01" y="-82869.65" z="-3905.0" heading="-15197" />
+        <spawn mapId="13" x="65479.66" y="-82529.81" z="-3582.0" heading="-31215" />
+        <spawn mapId="13" x="64996.758" y="-81115.77" z="-3535.0" heading="-22776" />
+        <spawn mapId="13" x="65137.453" y="-81210.83" z="-3509.0" heading="13694" />
+        <spawn mapId="13" x="64976.508" y="-81016.39" z="-3523.0" heading="21789" />
+        <spawn mapId="13" x="65217.773" y="-81061.375" z="-3461.0" heading="6481" />
+        <spawn mapId="13" x="66277.484" y="-82667.71" z="-3507.0" heading="-21328" />
+        <spawn mapId="13" x="66592.234" y="-82003.58" z="-3299.0" heading="-24105" />
+        <spawn mapId="13" x="66491.17" y="-82718.36" z="-3477.0" heading="-21695" />
+        <spawn mapId="13" x="65316.586" y="-81508.414" z="-3520.0" heading="14476" />
+        <spawn mapId="13" x="65263.29" y="-80763.91" z="-3413.0" heading="-20841" />
+        <spawn mapId="13" x="66118.39" y="-81409.414" z="-3367.0" heading="13960" />
+    </creature>
+    <creature id="101" creatureType="13" modelId="7340112" inoffensive="00" speed="12">
+        <spawn mapId="13" x="64649.13" y="-81956.57" z="-3723.0" heading="18742" />
+        <spawn mapId="13" x="64851.387" y="-82270.29" z="-3695.0" heading="-21069" />
+        <spawn mapId="13" x="64979.715" y="-82054.52" z="-3637.0" heading="-15282" />
+        <spawn mapId="13" x="65958.914" y="-82193.77" z="-3427.0" heading="17121" />
+        <spawn mapId="13" x="65954.66" y="-82523.21" z="-3517.0" heading="23394" />
+        <spawn mapId="13" x="65987.42" y="-82079.82" z="-3392.0" heading="-23494" />
+        <spawn mapId="13" x="66110.13" y="-82529.195" z="-3495.0" heading="-9662" />
+        <spawn mapId="13" x="65628.84" y="-81032.02" z="-3353.0" heading="9861" />
+        <spawn mapId="13" x="65542.29" y="-80645.8" z="-3306.0" heading="-31222" />
+        <spawn mapId="13" x="66189.414" y="-82118.43" z="-3373.0" heading="19944" />
+        <spawn mapId="13" x="66214.25" y="-82387.1" z="-3428.0" heading="-28030" />
+        <spawn mapId="13" x="65605.1" y="-80501.65" z="-3283.0" heading="-3414" />
+        <spawn mapId="13" x="67421.96" y="-77180.39" z="-2803.0" heading="22336" />
+        <spawn mapId="13" x="67659.36" y="-77316.28" z="-2796.0" heading="-15625" />
+        <spawn mapId="13" x="67675.19" y="-77166.88" z="-2795.0" heading="-14982" />
+        <spawn mapId="13" x="65287.703" y="-75452.74" z="-2970.0" heading="-16499" />
+        <spawn mapId="13" x="65154.996" y="-75390.05" z="-2957.0" heading="25102" />
+        <spawn mapId="13" x="65238.797" y="-75094.97" z="-2974.0" heading="1707" />
+    </creature>
+    <creature id="102" creatureType="13" modelId="7077978" inoffensive="00" speed="12">
+        <spawn mapId="13" x="59693.49" y="-83401.14" z="-4319.0" heading="2208" />
+        <spawn mapId="13" x="59271.152" y="-85131.375" z="-4194.0" heading="7240" />
+        <spawn mapId="13" x="59283.44" y="-85179.336" z="-4176.0" heading="-4199" />
+        <spawn mapId="13" x="59671.34" y="-83421.46" z="-4321.0" heading="-3959" />
+        <spawn mapId="13" x="59108.812" y="-85250.27" z="-4205.0" heading="-11565" />
+    </creature>
+    <creature id="888" creatureType="13" modelId="0" inoffensive="00" speed="10">
+        <spawn mapId="13" x="68101.67" y="-78485.9" z="-2771.8867" heading="-30038" />
+        <spawn mapId="13" x="67969.97" y="-78522.66" z="-2784.4648" heading="-30038" />
+        <spawn mapId="13" x="68025.05" y="-78203.58" z="-2771.914" heading="-30038" />
+        <spawn mapId="13" x="67936.06" y="-78384.336" z="-2784.4648" heading="-30584" />
+        <spawn mapId="13" x="67900.586" y="-78242.71" z="-2784.4648" heading="-30038" />
+        <spawn mapId="13" x="68063.695" y="-78348.62" z="-2774.8633" heading="-30038" />
+        <spawn mapId="13" x="67855.11" y="-78098.414" z="-2783.836" heading="-30038" />
+        <spawn mapId="13" x="67981.875" y="-78064.51" z="-2772.4414" heading="-30038" />
+        <spawn mapId="13" x="67969.97" y="-78522.66" z="-2784.4648" heading="-30038" />
+        <spawn mapId="13" x="67936.06" y="-78384.336" z="-2784.4648" heading="-30584" />
+        <spawn mapId="13" x="68025.05" y="-78203.58" z="-2771.914" heading="-30038" />
+        <spawn mapId="13" x="67900.586" y="-78242.71" z="-2784.4648" heading="-30038" />
+        <spawn mapId="13" x="67855.11" y="-78098.414" z="-2783.836" heading="-30038" />
+    </creature>
+    
+    <creature id="1001" creatureType="364" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66603.16" y="-77933.08" z="-2963.0" heading="-31312" />
+    </creature>
+    <creature id="1003" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66933.28" y="-80063.56" z="-3003.0" heading="5461" />
+    </creature>
+    <creature id="1005" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67560.914" y="-80128.445" z="-3018.0" heading="-23666" />
+    </creature>
+    <creature id="1007" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66913.516" y="-79107.51" z="-2965.0" heading="-29128" />
+    </creature>
+    <creature id="1008" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66865.38" y="-78758.664" z="-2958.0" heading="-28946" />
+    </creature>
+    <creature id="1014" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="91992.72" y="-88225.5" z="-4566.0" heading="0" />
+    </creature>
+    <creature id="1023" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67089.375" y="-81620.63" z="-3254.0" heading="-23484" />
+    </creature>
+    <creature id="1024" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67125.86" y="-75374.01" z="-2978.0" heading="9830" />
+    </creature>
+    <creature id="1029" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67882.5" y="-78792.83" z="-2781.0" heading="-29674" />
+    </creature>
+    <creature id="1031" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66840.68" y="-79520.69" z="-3006.0" heading="-12393" />
+    </creature>
+    <creature id="1033" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66979.64" y="-75261.305" z="-2987.0" heading="10740" />
+    </creature>
+    <creature id="1045" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67624.21" y="-80221.83" z="-3018.0" heading="-24394" />
+    </creature>
+    <creature id="1047" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66550.78" y="-79518.88" z="-3004.0" heading="3640" />
+    </creature>
+    <creature id="1048" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="65960.47" y="-78480.29" z="-2992.0" heading="9102" />
+    </creature>
+    <creature id="1050" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67183.53" y="-79444.14" z="-2968.0" heading="-27489" />
+    </creature>
+    <creature id="1053" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="72926.93" y="-72880.84" z="-2707.0" heading="-24212" />
+    </creature>
+    
+    <creature id="1101" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="92465.07" y="-87972.445" z="-4560.0" heading="-17113" />
+    </creature>
+    <creature id="1102" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="93217.14" y="-87684.88" z="-4558.0" heading="-2289" />
+    </creature>
+    <creature id="1103" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="92776.76" y="-87761.65" z="-4560.0" heading="-11105" />
+    </creature>
+    <creature id="1104" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="92109.22" y="-87981.68" z="-4558.0" heading="-16384" />
+    </creature>
+    <creature id="1105" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="92871.96" y="-88185.95" z="-4555.0" heading="-547" />
+    </creature>
+    <creature id="1145" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="63591.605" y="-83993.95" z="-3817.0" heading="21481" />
+    </creature>
+    <creature id="1146" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="63749.508" y="-83920.31" z="-3832.0" heading="29387" />
+    </creature>
+    <creature id="1147" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="63671.445" y="-84100.055" z="-3806.0" heading="15837" />
+    </creature>
+    <creature id="1028" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67294.695" y="-81783.43" z="-3256.0" heading="-23484" />
+    </creature>
+    <creature id="1049" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66947.3" y="-80229.52" z="-3002.0" heading="-4552" />
+    </creature>
+    <creature id="1046" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="66826.305" y="-79974.0" z="-3003.0" heading="14563" />
+    </creature>
+    <creature id="1102" creatureType="364" modelId="7209020" inoffensive="01" speed="12">
+        <spawn mapId="13" x="67840.37" y="-80523.91" z="-3017.0" heading="-7632" />
+    </creature>
+    <creature id="1145" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <spawn heading="21481" mapId="13" x="63591.605" y="-83993.95" z="-3817.0"/>
+        <spawn heading="21481" mapId="13" x="63591.605" y="-83993.95" z="-3817.0"/>
+    </creature>
+
+    <creature id="300932" creatureType="13" modelId="4980781" inoffensive="00" speed="12">
+        <spawn mapId="13" x="64883.33" y="-83832.91" z="-3801.0" heading="12200" />
+        <spawn mapId="13" x="65284.44" y="-83617.13" z="-3817.0" heading="-26375" />
+    </creature>
+    <creature id="301191" creatureType="13" modelId="4980786" inoffensive="00" speed="12">
+        <spawn mapId="13" x="68627.02" y="-75583.516" z="-2777.0" heading="32492" />
+        <spawn mapId="13" x="67894.125" y="-74230.39" z="-3006.0" heading="6384" />
+        <spawn mapId="13" x="67699.5" y="-74207.26" z="-3032.0" heading="-30852" />
+        <spawn mapId="13" x="67793.586" y="-74077.87" z="-3040.0" heading="6272" />
+        <spawn mapId="13" x="68612.625" y="-75251.65" z="-2791.0" heading="32492" />
+        <spawn mapId="13" x="68779.16" y="-75430.64" z="-2782.0" heading="32492" />
+        <spawn mapId="13" x="67961.305" y="-74044.67" z="-3023.0" heading="-20318" />
+        <spawn mapId="13" x="68792.836" y="-75337.43" z="-2787.0" heading="-24022" />
+        <spawn mapId="13" x="68579.87" y="-74305.164" z="-2971.0" heading="21437" />
+        <spawn mapId="13" x="68597.695" y="-74240.484" z="-2989.0" heading="-20265" />
+        <spawn mapId="13" x="68521.82" y="-74257.54" z="-2990.0" heading="-10" />
+        <spawn mapId="13" x="68451.81" y="-74102.516" z="-2995.0" heading="17790" />
+        <spawn mapId="13" x="68598.72" y="-73538.55" z="-3046.0" heading="16354" />
+        <spawn mapId="13" x="68654.98" y="-73556.586" z="-3038.0" heading="-9458" />
+        <spawn mapId="13" x="68481.52" y="-73498.64" z="-3069.0" heading="16156" />
+    </creature>
+    <creature id="301193" creatureType="13" modelId="4980786" inoffensive="00" speed="12">
+        <spawn mapId="13" x="68539.54" y="-75516.72" z="-2784.0" heading="7876" />
+        <spawn mapId="13" x="68520.47" y="-75412.75" z="-2789.0" heading="32492" />
+        <spawn mapId="13" x="67813.31" y="-74198.8" z="-3014.0" heading="8875" />
+        <spawn mapId="13" x="67781.984" y="-74041.15" z="-3049.0" heading="-2421" />
+        <spawn mapId="13" x="68466.625" y="-74191.79" z="-2995.0" heading="8606" />
+        <spawn mapId="13" x="68670.04" y="-74277.445" z="-2972.0" heading="11302" />
+        <spawn mapId="13" x="68543.42" y="-73532.086" z="-3056.0" heading="11782" />
+    </creature>
+    <creature id="301194" creatureType="13" modelId="6225970" inoffensive="00" speed="12">
+        <spawn mapId="13" x="67775.945" y="-74117.59" z="-3035.0" heading="-28654" />
+        <spawn mapId="13" x="68696.875" y="-75546.766" z="-2777.0" heading="-15018" />
+        <spawn mapId="13" x="68646.13" y="-74133.12" z="-2992.0" heading="6594" />
+    </creature>
+</creatures>

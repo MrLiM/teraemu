@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/creatures"
+    xmlns:xsd="http://angelis.com/creatures" xmlns:base="http://angelis.com/base" elementFormDefault="qualified">
+    
+    <!-- IMPORTS -->
+    <import schemaLocation="base.xsd" namespace="http://angelis.com/base"/>
+    
+    <!-- TYPES -->
+    <complexType name="CreatureSpawnType">
+        <complexContent> 
+            <extension base="base:BaseSpawnType">
+                <attribute name="heading" type="integer"/>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CreatureType">
+        <sequence>
+            <element name="spawn" type="xsd:CreatureSpawnType" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="integer"/>
+        <attribute name="creatureType" type="integer"/>
+        <attribute name="modelId" type="integer"/>
+        <attribute name="inoffensive" type="integer"/>
+        <attribute name="speed" type="short"/>
+    </complexType>
+    
+    <complexType name="CreaturesType">
+        <sequence>
+            <element name="creature" type="xsd:CreatureType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="creatures" type="xsd:CreaturesType"/>
+</schema>

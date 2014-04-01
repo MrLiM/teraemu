@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/basestats"
+    xmlns:xsd="http://angelis.com/basestats" xmlns:base="http://angelis.com/base" elementFormDefault="qualified">
+    
+    <!-- IMPORT -->
+    <import schemaLocation="base.xsd" namespace="http://angelis.com/base"/>
+    
+    <!-- TYPE -->
+    <complexType name="BaseStatType">
+        <attribute name="targetClass" type="base:ClassType"/>
+        <attribute name="hp" type="integer"/>
+        <attribute name="mp" type="integer"/>
+        <attribute name="attack" type="integer"/>
+        <attribute name="defense" type="integer"/>
+        <attribute name="speed" type="integer"/>
+        <attribute name="critChance" type="integer"/>
+        <attribute name="critResist" type="integer"/>
+    </complexType>
+    
+    <complexType name="BaseStatsType">
+        <sequence>
+            <element name="basestat" type="xsd:BaseStatType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="basestats" type="xsd:BaseStatsType"/>
+</schema>

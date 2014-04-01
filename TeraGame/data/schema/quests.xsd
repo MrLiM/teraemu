@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://angelis.com/quests"
+    xmlns:xsd="http://angelis.com/quests" xmlns:base="http://angelis.com/base" elementFormDefault="qualified">
+    
+    <!-- IMPORTS -->
+    
+    <!-- TYPES -->
+    <complexType name="QuestsType">
+    </complexType>
+    
+    <!-- CONTENT -->
+    <element name="quests" type="xsd:QuestsType"/>
+</schema>
