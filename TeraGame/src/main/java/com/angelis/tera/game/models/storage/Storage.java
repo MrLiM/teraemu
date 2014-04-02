@@ -14,10 +14,11 @@ public class Storage extends AbstractModel {
     List<StorageItem> storageItems;
     
     public Storage(Integer abstractId) {
-        super(abstractId);
+        super(abstractId, null);
     }
 
     public Storage(StorageTypeEnum storageType) {
+        super(null, null);
         this.storageType = storageType;
     }
 
@@ -57,6 +58,6 @@ public class Storage extends AbstractModel {
         }
         
         // TODO handle null for caller
-        return new StorageItem();
+        return new StorageItem(null);
     }
 }

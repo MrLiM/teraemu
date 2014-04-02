@@ -59,15 +59,13 @@ public class Player extends Creature {
     private List<PlayerRelation> friends;
     private List<PlayerRelation> blockeds;
     private byte[] zoneData;
-    
-    private final PlayerController playerController = new PlayerController(this);
 
     public Player(Integer abstractId) {
-        super(abstractId, ObjectIDService.getInstance().generateId(ObjectFamilyEnum.PLAYER));
+        super(abstractId, ObjectIDService.getInstance().generateId(ObjectFamilyEnum.PLAYER), new PlayerController());
     }
     
     public Player() {
-        super(ObjectIDService.getInstance().generateId(ObjectFamilyEnum.PLAYER));
+        this(null);
     }
     
     public String getName() {
@@ -251,6 +249,11 @@ public class Player extends Creature {
     }
     
     @Override
+    public PlayerController getController() {
+        return (PlayerController) this.controller;
+    }
+    
+    @Override
     public void onObservableUpdate(CreatureEventTypeEnum event, IsObservable<CreatureEventTypeEnum> observable, Object... data) {
         List<TeraServerPacket> packets = new FastList<>();
         switch (event) {
@@ -321,10 +324,6 @@ public class Player extends Creature {
         for (TeraServerPacket packet : packets) {
             this.getConnection().sendPacket(packet);
         }
-    }
-
-    public PlayerController getPlayerController() {
-        return playerController;
     }
 
     public Storage getStorage(StorageTypeEnum storageType) {

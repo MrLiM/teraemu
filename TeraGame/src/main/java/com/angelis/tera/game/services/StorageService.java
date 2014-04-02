@@ -55,6 +55,4 @@ public class StorageService extends AbstractService {
         }
         return instance;
     }
-
-    
 }

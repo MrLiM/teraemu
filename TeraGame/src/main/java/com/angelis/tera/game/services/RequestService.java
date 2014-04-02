@@ -34,7 +34,7 @@ public class RequestService extends AbstractService {
     }
     
     public void onPlayerRequest(Player player, Request request) {
-        Request currentRequest = player.getPlayerController().getRequest();
+        Request currentRequest = player.getController().getRequest();
         if (currentRequest != null) {
             // TODO
         }

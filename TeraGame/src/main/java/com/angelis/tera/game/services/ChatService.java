@@ -43,7 +43,7 @@ public class ChatService extends AbstractService {
             return;
         }
         
-        if (!player.getPlayerController().can(Right.TALK)) {
+        if (!player.getController().can(Right.TALK)) {
             log.info("Muted player "+player.getName()+" tryed to talk");
             player.getConnection().sendPacket(new SM_PLAYER_CHAT(player, "Vous êtes muté", ChatTypeEnum.SYSTEM));
             return;
@@ -81,7 +81,7 @@ public class ChatService extends AbstractService {
             break;
             
             default:
-                for (TeraGameConnection connection : WorldService.getInstance().getAllConnections()) {
+                for (TeraGameConnection connection : WorldService.getInstance().getAllOnlineConnections()) {
                     connection.sendPacket(packet);
                 }
         }

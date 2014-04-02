@@ -35,6 +35,8 @@ import com.angelis.tera.game.network.packet.client.CM_PLAYER_BLOCK_REMOVE;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_CHAT;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_CLIMB;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_COMPARE_ACHIEVEMENTS;
+import com.angelis.tera.game.network.packet.client.CM_PLAYER_DIALOG_WINDOW_SELECT;
+import com.angelis.tera.game.network.packet.client.CM_PLAYER_DIALOG_WINDOW_SHOW;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_DONJON_STATS_PVP;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_EMOTE;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_FRIEND_ADD;
@@ -49,8 +51,7 @@ import com.angelis.tera.game.network.packet.client.CM_PLAYER_REQUEST;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_SELECT_CREATURE;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_SEND_REQUEST;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_SET_TITLE;
-import com.angelis.tera.game.network.packet.client.CM_PLAYER_TALK_WINDOW_CLOSE;
-import com.angelis.tera.game.network.packet.client.CM_PLAYER_TALK_WINDOW_SHOW;
+import com.angelis.tera.game.network.packet.client.CM_PLAYER_DIALOG_SELECT;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_WHISPER;
 import com.angelis.tera.game.network.packet.client.CM_PLAYER_ZONE_CHANGE;
 import com.angelis.tera.game.network.packet.client.CM_QUIT_GAME;
@@ -109,7 +110,8 @@ public class ClientPacketHandler {
         addPacket((short) 0x8FA2, CM_UNK_ENTER_WORLD3.class);  // OK
         addPacket((short) 0xAABA, CM_UNK_ENTER_WORLD4.class); // OK
         addPacket((short) 0xD2E5, CM_PING.class);
-        addPacket((short) 0x8033, CM_PLAYER_TALK_WINDOW_SHOW.class); // OK
+        addPacket((short) 0x8033, CM_PLAYER_DIALOG_WINDOW_SHOW.class); // OK
+        addPacket((short) 0xDA01, CM_PLAYER_DIALOG_WINDOW_SELECT.class); // OK
         addPacket((short) 0xBC07, CM_PLAYER_CLIMB.class); // OK
 
 
@@ -123,7 +125,7 @@ public class ClientPacketHandler {
         addPacket((short) 0x88BC, CM_PLAYER_WHISPER.class); // OK
         
         
-        addPacket((short) 0xAF2E, CM_PLAYER_TALK_WINDOW_CLOSE.class); // OK
+        addPacket((short) 0xAF2E, CM_PLAYER_DIALOG_SELECT.class); // OK
         
         
         // PLAYER

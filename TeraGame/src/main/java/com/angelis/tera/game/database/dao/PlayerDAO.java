@@ -12,10 +12,6 @@ public class PlayerDAO extends AbstractDAO<PlayerEntity> {
 
     @Override
     public void create(PlayerEntity entity) {
-        if (entity.getId() != null) {
-            return;
-        }
-        
         Transaction transaction = session.beginTransaction();
         
         Integer id = (Integer) session.save(session.merge(entity));

@@ -1,5 +1,7 @@
 package com.angelis.tera.game.models;
 
+import com.angelis.tera.game.controllers.Controller;
+
 
 public abstract class Creature extends TeraObject {
     
@@ -9,12 +11,12 @@ public abstract class Creature extends TeraObject {
     
     private Creature target;
     
-    public Creature(Integer id, int uid) {
-        super(id, uid);
+    public Creature(Integer id, int uid, Controller<? extends Creature> controller) {
+        super(id, uid, controller);
     }
 
-    public Creature(int uid) {
-        super(uid);
+    public Creature(int uid, Controller<? extends Creature> controller) {
+        super(uid, controller);
     }
 
     public CreatureBaseStats getBaseStats() {

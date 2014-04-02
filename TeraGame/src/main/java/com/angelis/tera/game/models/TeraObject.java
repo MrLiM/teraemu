@@ -9,25 +9,24 @@ import javolution.util.FastSet;
 import com.angelis.tera.common.lang.IsObservable;
 import com.angelis.tera.common.lang.IsObserver;
 import com.angelis.tera.common.model.AbstractModel;
+import com.angelis.tera.common.model.HasUid;
+import com.angelis.tera.game.controllers.Controller;
 
 public abstract class TeraObject extends AbstractModel implements IsObservable<CreatureEventTypeEnum>, IsObserver<CreatureEventTypeEnum>, HasUid {
+    
+    /** OBSERVERS */
     private final Set<IsObserver<CreatureEventTypeEnum>> observers = Collections.synchronizedSet(new FastSet<IsObserver<CreatureEventTypeEnum>>());
     
-    private final int uid;
+    protected final Controller<? extends TeraObject> controller;
     private WorldPosition worldPosition;
     
-    public TeraObject(Integer id, int uid) {
-        super(id);
-        this.uid = uid;
+    public TeraObject(Integer id, int uid, Controller<? extends TeraObject> controller) {
+        super(id, uid);
+        this.controller = controller;
     }
     
-    public TeraObject(int uid) {
-        super();
-        this.uid = uid;
-    }
-
-    public int getUid() {
-        return uid;
+    public TeraObject(int uid, Controller<? extends TeraObject> controller) {
+        this(null, uid, controller);
     }
     
     public WorldPosition getWorldPosition() {
@@ -37,6 +36,8 @@ public abstract class TeraObject extends AbstractModel implements IsObservable<C
     public void setWorldPosition(WorldPosition worldPosition) {
         this.worldPosition = worldPosition;
     }
+    
+    public abstract Controller<? extends TeraObject> getController();
     
     @Override
     public synchronized void addObserver(IsObserver<CreatureEventTypeEnum> observer) {

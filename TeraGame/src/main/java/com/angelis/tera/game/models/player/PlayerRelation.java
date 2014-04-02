@@ -8,6 +8,7 @@ public class PlayerRelation extends AbstractModel {
     private String note;
 
     public PlayerRelation(Player player) {
+        super(null, null);
         this.player = player;
     }
 

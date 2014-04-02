@@ -12,10 +12,6 @@ public class AccountDAO extends AbstractDAO<AccountEntity> {
     
     @Override
     public void create(AccountEntity entity) {
-        if (entity.getId() != null) {
-            return;
-        }
-        
         Transaction transaction = session.beginTransaction();
         
         Integer id = (Integer) session.save(session.merge(entity));

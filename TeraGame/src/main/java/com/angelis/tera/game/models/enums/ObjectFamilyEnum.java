@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import com.angelis.tera.common.utils.PrintUtils;
 import com.angelis.tera.game.models.Gather;
 import com.angelis.tera.game.models.TeraCreature;
+import com.angelis.tera.game.models.dialog.Dialog;
 import com.angelis.tera.game.models.player.Player;
 import com.angelis.tera.game.models.player.request.PartyInviteRequest;
 import com.angelis.tera.game.models.player.request.Request;
@@ -22,10 +23,12 @@ public enum ObjectFamilyEnum {
     PLAYER("00800001", Player.class),
     CREATURE("00800C00", TeraCreature.class),
     GATHER("00800400", Gather.class),
+    DIALOG("00800C00", Dialog.class),
     ITEM("0", Void.class), // TODO
     INVENTORYITEM("0", Void.class), // TODO
     PROJECTILE("0", Void.class), // TODO
-    CAMPFIRE("0", Void.class); // TODO
+    CAMPFIRE("0", Void.class), // TODO
+    GUILD("0", Void.class); // TODO
     
     public final Class<?>[] associatedClass;
     public final byte[] value;

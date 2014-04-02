@@ -3,12 +3,17 @@ package com.angelis.tera.game.models;
 import com.angelis.tera.common.model.AbstractModel;
 
 public class Spawn extends AbstractModel {
+
     private int mapId;
     private float x;
     private float y;
     private float z;
     private short heading;
 
+    public Spawn() {
+        super(null, null);
+    }
+    
     public int getMapId() {
         return mapId;
     }

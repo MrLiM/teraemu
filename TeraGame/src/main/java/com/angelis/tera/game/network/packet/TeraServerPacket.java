@@ -5,10 +5,10 @@ import java.nio.ByteOrder;
 
 import org.apache.log4j.Logger;
 
+import com.angelis.tera.common.model.HasUid;
 import com.angelis.tera.common.network.crypt.CryptSession;
 import com.angelis.tera.common.network.packet.AbstractServerPacket;
 import com.angelis.tera.common.utils.PrintUtils;
-import com.angelis.tera.game.models.HasUid;
 import com.angelis.tera.game.models.enums.ObjectFamilyEnum;
 import com.angelis.tera.game.network.connection.TeraGameConnection;
 

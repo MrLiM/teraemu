@@ -12,7 +12,7 @@ public class AnnounceCommand extends AbstractAdminCommand {
     @Override
     public void execute(TeraGameConnection connection, String[] arguments) {
         SM_PLAYER_CHAT packet = new SM_PLAYER_CHAT(connection.getActivePlayer(), StringUtils.join(arguments, " "), ChatTypeEnum.SYSTEM);
-        for (TeraGameConnection con : WorldService.getInstance().getAllConnections()) {
+        for (TeraGameConnection con : WorldService.getInstance().getAllOnlineConnections()) {
             con.sendPacket(packet);
         }
     }

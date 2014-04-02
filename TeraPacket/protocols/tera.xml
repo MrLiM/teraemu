@@ -3,7 +3,9 @@
 	strictlength="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="protocol.xsd">
 	<packetfamilly switchtype="c" way="ServerPackets">
-
+        <packet name="SM_AUTH" id="0x9CE2">
+            
+        </packet>
 	</packetfamilly>
 	
 	<packetfamilly switchtype="c" way="ClientPackets">

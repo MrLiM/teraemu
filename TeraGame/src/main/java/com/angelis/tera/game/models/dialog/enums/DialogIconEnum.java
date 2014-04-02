@@ -29,7 +29,7 @@ public enum DialogIconEnum {
     REPEATED_UNK_QUEST_START(28),
 
     CENTERED(31),
-    CENTERED_GRAY(34);
+    CENTERED_GRAY(36); // OK
     
     public final int value;
     

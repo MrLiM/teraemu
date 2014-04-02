@@ -3,6 +3,7 @@ package com.angelis.tera.game.command.admin;
 import com.angelis.tera.game.network.connection.TeraGameConnection;
 import com.angelis.tera.game.network.packet.ClientPacketHandler;
 import com.angelis.tera.game.network.packet.ServerPacketHandler;
+import com.angelis.tera.game.services.XMLService;
 
 public class ReloadCommand extends AbstractAdminCommand {
 
@@ -12,6 +13,10 @@ public class ReloadCommand extends AbstractAdminCommand {
             case "network":
                 ServerPacketHandler.init();
                 ClientPacketHandler.init();
+            break;
+            
+            case "xml":
+                XMLService.getInstance().restart();
             break;
         }
     }

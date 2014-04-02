@@ -1,9 +1,11 @@
-package com.angelis.tera.tools.extractor.creature;
+package com.angelis.tera.tools.extractor;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.nio.ByteBuffer;
 import java.util.Map;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -14,25 +16,28 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import javolution.util.FastMap;
+import javolution.util.FastSet;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
 import com.angelis.tera.common.utils.BitConverter;
 import com.angelis.tera.common.utils.PrintUtils;
 
 
-public class MainCreatureExtractor {
+public class MainGatherExtractor {
     private static int mapId;
 
     private static Map<Integer, Element> elements = new FastMap<>();
+    private static Map<Element, Set<Element>> spawns = new FastMap<>();
 
     public static void main(String[] args) throws Exception {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         
         Document doc = docBuilder.newDocument();
-        Element rootElement = doc.createElement("creatures");
+        Element rootElement = doc.createElement("gathers");
         doc.appendChild(rootElement);
         
         BufferedReader br = new BufferedReader(new FileReader(new File("C:/Users/Angelis/Desktop/t-watch-p5/log.txt")));
@@ -48,7 +53,7 @@ public class MainCreatureExtractor {
                 continue;
             }
             
-            if (line.substring(4, 8).equals("4BC8")) {
+            if (line.substring(4, 8).equals("839F")) {
                 parseLine(doc, line);
             }
         }
@@ -63,34 +68,32 @@ public class MainCreatureExtractor {
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
         DOMSource source = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File("C:/Users/Angelis/Desktop/t-watch-p5/creature-converted.xml"));
+        StreamResult result = new StreamResult(new File("C:/Users/Angelis/Desktop/t-watch-p5/gather-converted.xml"));
 
         transformer.transform(source, result);
     }
     
     private static void parseLine(Document doc, String line) throws Exception {
-        String npcRealData = line.substring(52);
+        String npcRealData = line.substring(24);
 
-        float x = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(0, 8))), 0);
-        float y = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(8, 16))), 0);
-        float z = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(16, 24))), 0);
-        int heading = BitConverter.toInt16(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(24, 28))), 0);
-        int speed = BitConverter.toInt32(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(28, 36))), 0);
-        int id = BitConverter.toInt32(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(36, 44))), 0);
-        int creatureType = BitConverter.toInt16(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(44, 48))), 0);
-        int modelId = BitConverter.toInt32(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(48, 56))), 0);
-        // shit 18
-        String inoffensive = npcRealData.substring(74, 76);
+        int id = BitConverter.toInt32(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(0, 8))), 0);
+        // gatherCount
+        float x = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(16, 24))), 0);
+        float y = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(24, 32))), 0);
+        float z = BitConverter.toSingle(PrintUtils.hex2bytes(PrintUtils.reverseHex(npcRealData.substring(32, 40))), 0);
 
+        
         Element creatureRootElement = elements.get(id);
         if (creatureRootElement == null) {
-            creatureRootElement = doc.createElement("creature");
+            creatureRootElement = doc.createElement("gather");
             creatureRootElement.setAttribute("id", String.valueOf(id));
-            creatureRootElement.setAttribute("creatureType", String.valueOf(creatureType));
-            creatureRootElement.setAttribute("modelId", String.valueOf(modelId));
-            creatureRootElement.setAttribute("inoffensive", inoffensive);
-            creatureRootElement.setAttribute("speed", String.valueOf(speed));
             elements.put(id,  creatureRootElement);
+        }
+        
+        Set<Element> spawnElements = spawns.get(creatureRootElement);
+        if (spawnElements == null) {
+            spawnElements = new FastSet<>();
+            spawns.put(creatureRootElement, spawnElements);
         }
         
         Element spawnRootElement = doc.createElement("spawn");
@@ -98,7 +101,18 @@ public class MainCreatureExtractor {
         spawnRootElement.setAttribute("x", String.valueOf(x));
         spawnRootElement.setAttribute("y", String.valueOf(y));
         spawnRootElement.setAttribute("z", String.valueOf(z));
-        spawnRootElement.setAttribute("heading", String.valueOf(heading));
-        creatureRootElement.appendChild(spawnRootElement);
+        
+        boolean contained = false;
+        for (Element element : spawnElements) {
+            if (((Node) element).isEqualNode((Node) spawnRootElement)) {
+                contained = true;
+                break;
+            }
+        }
+        
+        if (!contained) {
+            spawnElements.add(spawnRootElement);
+            creatureRootElement.appendChild(spawnRootElement);
+        }
     }
 }

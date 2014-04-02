@@ -6,15 +6,10 @@ import com.angelis.tera.game.controllers.enums.Right;
 import com.angelis.tera.game.models.player.Player;
 import com.angelis.tera.game.models.player.request.Request;
 
-public class PlayerController {
+public class PlayerController extends Controller<Player> {
 
-    private final Player player;
     private final EnumSet<Right> rights = EnumSet.allOf(Right.class);
     private Request request;
-    
-    public PlayerController(Player player) {
-        this.player = player;
-    }
     
     public boolean can(Right right) {
         return this.rights.contains(right);

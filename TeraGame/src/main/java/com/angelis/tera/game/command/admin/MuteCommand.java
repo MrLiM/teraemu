@@ -20,7 +20,7 @@ public class MuteCommand extends AbstractAdminCommand {
             return;
         }
         
-        targetPlayer.getPlayerController().removeRight(Right.TALK);
+        targetPlayer.getController().removeRight(Right.TALK);
     }
 
     @Override

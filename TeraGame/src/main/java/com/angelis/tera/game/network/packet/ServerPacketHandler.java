@@ -17,6 +17,7 @@ import com.angelis.tera.game.network.packet.server.SM_CHARACTER_DELETE;
 import com.angelis.tera.game.network.packet.server.SM_CHARACTER_RESTORE;
 import com.angelis.tera.game.network.packet.server.SM_CHAT_INFO;
 import com.angelis.tera.game.network.packet.server.SM_CHECK_VERSION;
+import com.angelis.tera.game.network.packet.server.SM_CREATURE_EMOTE;
 import com.angelis.tera.game.network.packet.server.SM_CREATURE_INFO;
 import com.angelis.tera.game.network.packet.server.SM_CREATURE_MOVE;
 import com.angelis.tera.game.network.packet.server.SM_CREATURE_REMOVE;
@@ -30,6 +31,7 @@ import com.angelis.tera.game.network.packet.server.SM_OPCODE_LESS_PACKET;
 import com.angelis.tera.game.network.packet.server.SM_OPTION_SHOW_MASK;
 import com.angelis.tera.game.network.packet.server.SM_PLAYER_BIND;
 import com.angelis.tera.game.network.packet.server.SM_PLAYER_CHAT;
+import com.angelis.tera.game.network.packet.server.SM_PLAYER_DIALOG_SHOW;
 import com.angelis.tera.game.network.packet.server.SM_PLAYER_DONJON_STATS_PVP;
 import com.angelis.tera.game.network.packet.server.SM_PLAYER_EMOTE;
 import com.angelis.tera.game.network.packet.server.SM_PLAYER_ENTER_CHANNEL;
@@ -123,6 +125,8 @@ public class ServerPacketHandler {
         addPacket((short) 0x570D, SM_PLAYER_ZONE_CHANGE.class); // OK
         addPacket((short) 0x7C20, SM_PLAYER_REMOVE.class); // OK
         addPacket((short) 0xFBF1, SM_PLAYER_SELECT_CREATURE.class); // OK
+        addPacket((short) 0x7D06, SM_PLAYER_DIALOG_SHOW.class); // OK
+        addPacket((short) 0xDB24, SM_CREATURE_EMOTE.class); // OK
         
         
         // GROUP
@@ -156,7 +160,6 @@ public class ServerPacketHandler {
         addPacket((short) 0xFAB3, SM_PLAYER_FRIEND_LIST.class); // OK
         addPacket((short) 0x688B, SM_PLAYER_FRIEND_ADD_SUCCESS.class); // OK
         addPacket((short) 0xBF72, SM_PLAYER_FRIEND_REMOVE_SUCCESS.class); // OK
-        // addPacket((short) 0xA84B, SM_PLAYER_SOCIAL.class);
         
         
         // SHOP

@@ -82,6 +82,7 @@ public class PlayerService extends AbstractService {
         player.setLastOnlineTime(new Date());
         
         WorldService.getInstance().onPlayerDisconnect(player);
+        VisibleService.getInstance().onPlayerDisconnect(player);
         
         ThreadPoolService.getInstance().cancelAllTasksByLinkedObject(player);
         ObjectIDService.getInstance().releaseId(ObjectFamilyEnum.fromClass(player.getClass()), player.getUid());
@@ -102,6 +103,7 @@ public class PlayerService extends AbstractService {
         worldPosition.setHeading(heading);
         
         WorldService.getInstance().onPlayerMove(player);
+        VisibleService.getInstance().onPlayerMove(player);
         player.notifyObservers(CreatureEventTypeEnum.MOVE, x1, y1, z1, heading, x2, y2, z2, moveType, unk2, unk3);
     }
 

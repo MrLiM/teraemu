@@ -34,8 +34,11 @@ public class CreatureEntity extends AbstractXMLEntity {
     @XmlAttribute(name = "speed")
     private short speed;
 
+    @XmlElement(name = "template", namespace = "http://angelis.com/creatures")
+    private CreatureTemplateEntity creatureTemplate;;
+    
     @XmlElement(name = "spawn", namespace = "http://angelis.com/creatures")
-    private Set<CreatureSpawnEntity> spawns;
+    private Set<CreatureSpawnEntity> creatureSpawns;
 
     public Integer getId() {
         return this.id;
@@ -57,11 +60,15 @@ public class CreatureEntity extends AbstractXMLEntity {
         return speed;
     }
 
-    public Set<CreatureSpawnEntity> getSpawns() {
-        if (this.spawns == null) {
-            this.spawns = new FastSet<>();
+    public CreatureTemplateEntity getCreatureTemplate() {
+        return creatureTemplate;
+    }
+    
+    public Set<CreatureSpawnEntity> getCreatureSpawns() {
+        if (this.creatureSpawns == null) {
+            this.creatureSpawns = new FastSet<>();
         }
-        return this.spawns;
+        return this.creatureSpawns;
     }
 
     @Override

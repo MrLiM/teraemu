@@ -6,6 +6,18 @@
     <import schemaLocation="base.xsd" namespace="http://angelis.com/base"/>
     
     <!-- TYPES -->
+    <simpleType name="CreatureTitleType">
+        <restriction base="string">
+            <enumeration value="FLIGHT_MASTER"/>
+            <enumeration value="BANK"/>
+        </restriction>
+    </simpleType>
+    
+    <complexType name="CreatureTemplateType">
+        <attribute name="title" type="xsd:CreatureTitleType"/>
+        <attribute name="huntingZoneId" type="integer"/>
+    </complexType>
+    
     <complexType name="CreatureSpawnType">
         <complexContent> 
             <extension base="base:BaseSpawnType">
@@ -16,6 +28,7 @@
     
     <complexType name="CreatureType">
         <sequence>
+            <element name="template" type="xsd:CreatureTemplateType" minOccurs="0"/>
             <element name="spawn" type="xsd:CreatureSpawnType" maxOccurs="unbounded"/>
         </sequence>
         <attribute name="id" type="integer"/>

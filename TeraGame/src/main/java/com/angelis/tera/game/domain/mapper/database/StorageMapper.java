@@ -25,7 +25,11 @@ public class StorageMapper extends DatabaseMapper<StorageEntity, Storage> {
         // STORAGE ITEM
         List<StorageItemEntity> storageItems = new FastList<>();
         for (StorageItem storageItem : model.getStorageItems()) {
-            storageItems.add(MapperManager.getMapper(StorageItemMapper.class).map(storageItem, storageEntity));
+            if (linkedEntity instanceof StorageItemEntity) {
+                storageItems.add((StorageItemEntity) linkedEntity);
+            } else {
+                storageItems.add(MapperManager.getMapper(StorageItemMapper.class).map(storageItem, storageEntity));
+            }
         }
         storageEntity.setStorageItems(storageItems);
         
@@ -42,7 +46,11 @@ public class StorageMapper extends DatabaseMapper<StorageEntity, Storage> {
         // STORAGE ITEM
         List<StorageItem> storageItems = new FastList<>();
         for (StorageItemEntity storageItemEntity : entity.getStorageItems()) {
-            storageItems.add(MapperManager.getMapper(StorageItemMapper.class).map(storageItemEntity, storage));
+            if (linkedModel instanceof StorageItem) {
+                storageItems.add((StorageItem) linkedModel);
+            } else {
+                storageItems.add(MapperManager.getMapper(StorageItemMapper.class).map(storageItemEntity, storage));
+            }
         }
         storage.setStorageItems(storageItems);
         
@@ -53,5 +61,4 @@ public class StorageMapper extends DatabaseMapper<StorageEntity, Storage> {
     public boolean equals(AbstractModel model, AbstractEntity entity) {
         return model.getId() == entity.getId();
     }
-
 }

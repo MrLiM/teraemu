@@ -12,11 +12,11 @@ public class StorageItem extends AbstractModel {
     private Storage storage;
 
     public StorageItem(Integer id) {
-        super(id);
+        super(id, null);
     }
     
     public StorageItem() {
-        super();
+        super(null, null);
     }
 
     public int getItemId() {

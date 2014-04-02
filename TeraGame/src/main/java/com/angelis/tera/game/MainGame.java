@@ -6,6 +6,7 @@ import com.angelis.tera.game.services.AdminService;
 import com.angelis.tera.game.services.ChatService;
 import com.angelis.tera.game.services.ConfigService;
 import com.angelis.tera.game.services.DatabaseService;
+import com.angelis.tera.game.services.DialogService;
 import com.angelis.tera.game.services.NetworkService;
 import com.angelis.tera.game.services.ObjectIDService;
 import com.angelis.tera.game.services.PlayerService;
@@ -15,6 +16,7 @@ import com.angelis.tera.game.services.SpawnService;
 import com.angelis.tera.game.services.StorageService;
 import com.angelis.tera.game.services.ThreadPoolService;
 import com.angelis.tera.game.services.UserService;
+import com.angelis.tera.game.services.VisibleService;
 import com.angelis.tera.game.services.WorldService;
 import com.angelis.tera.game.services.XMLService;
 
@@ -38,7 +40,9 @@ public class MainGame {
 		WorldService.getInstance().start();
 		StorageService.getInstance().start();
 		SpawnService.getInstance().start();
+		DialogService.getInstance().start();
 		RequestService.getInstance().start();
+		VisibleService.getInstance().start();
 		NetworkService.getInstance().start();
 
 		PrintUtils.printSection("Launching");

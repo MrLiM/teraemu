@@ -65,8 +65,10 @@
     
     <creature id="1001" creatureType="364" modelId="7209020" inoffensive="01" speed="12">
         <spawn mapId="13" x="66603.16" y="-77933.08" z="-2963.0" heading="-31312" />
+        <spawn mapId="13" x="70732.31" y="-70319.195" z="-3469.0" heading="-17113"/>
     </creature>
     <creature id="1003" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <template title="BANK" huntingZoneId="213"/>
         <spawn mapId="13" x="66933.28" y="-80063.56" z="-3003.0" heading="5461" />
     </creature>
     <creature id="1005" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
@@ -80,6 +82,10 @@
     </creature>
     <creature id="1014" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
         <spawn mapId="13" x="91992.72" y="-88225.5" z="-4566.0" heading="0" />
+    </creature>
+    <creature id="1016" creatureType="213" modelId="7209020" inoffensive="01" speed="12">
+        <template title="FLIGHT_MASTER" huntingZoneId="213"/>
+        <spawn heading="-15110" mapId="13" x="70922.97" y="-69956.63" z="-3336.0"/>
     </creature>
     <creature id="1023" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
         <spawn mapId="13" x="67089.375" y="-81620.63" z="-3254.0" heading="-23484" />
@@ -98,6 +104,10 @@
     </creature>
     <creature id="1045" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
         <spawn mapId="13" x="67624.21" y="-80221.83" z="-3018.0" heading="-24394" />
+    </creature>
+    <creature id="1046" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
+        <spawn heading="14563" mapId="13" x="66826.305" y="-79974.0" z="-3003.0"/>
+        <spawn heading="14563" mapId="13" x="66826.305" y="-79974.0" z="-3003.0"/>
     </creature>
     <creature id="1047" creatureType="64" modelId="7209020" inoffensive="01" speed="12">
         <spawn mapId="13" x="66550.78" y="-79518.88" z="-3004.0" heading="3640" />

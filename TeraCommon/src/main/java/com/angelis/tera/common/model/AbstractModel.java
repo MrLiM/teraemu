@@ -1,24 +1,27 @@
 package com.angelis.tera.common.model;
 
-import com.angelis.tera.common.domain.mapper.HasId;
+import com.angelis.tera.common.entity.HasId;
 
-public abstract class AbstractModel implements HasId {
+public abstract class AbstractModel implements HasId, HasUid {
     
     private Integer id;
+    private final Integer uid;
     
-    public AbstractModel(Integer id) {
+    public AbstractModel(Integer id, Integer uid) {
         this.id = id;
-    }
-    
-    public AbstractModel() {
+        this.uid = uid;
     }
 
     public Integer getId() {
         return id;
     }
-
+    
     public void setId(Integer id) {
         this.id = id;
+    }
+    
+    public Integer getUid() {
+        return this.uid;
     }
 
     @Override

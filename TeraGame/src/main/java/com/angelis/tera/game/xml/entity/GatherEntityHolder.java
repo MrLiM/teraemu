@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.apache.log4j.Logger;
-
 import javolution.util.FastSet;
+
+import org.apache.log4j.Logger;
 
 import com.angelis.tera.common.xml.entity.AbstractXMLEntity;
 

@@ -14,7 +14,7 @@ public class UnmuteCommand extends AbstractAdminCommand {
             return;
         }
         
-        targetPlayer.getPlayerController().addRight(Right.TALK);
+        targetPlayer.getController().addRight(Right.TALK);
     }
 
     @Override

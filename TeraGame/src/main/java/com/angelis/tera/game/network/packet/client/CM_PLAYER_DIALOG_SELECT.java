@@ -5,16 +5,16 @@ import java.nio.ByteBuffer;
 import com.angelis.tera.game.network.connection.TeraGameConnection;
 import com.angelis.tera.game.network.packet.TeraClientPacket;
 
-public class CM_PLAYER_TALK_WINDOW_CLOSE extends TeraClientPacket {
+public class CM_PLAYER_DIALOG_SELECT extends TeraClientPacket {
 
-    public CM_PLAYER_TALK_WINDOW_CLOSE(ByteBuffer byteBuffer, TeraGameConnection connection) {
+    public CM_PLAYER_DIALOG_SELECT(ByteBuffer byteBuffer, TeraGameConnection connection) {
         super(byteBuffer, connection);
     }
 
     @Override
     protected void readImpl() {
-        // TODO Auto-generated method stub
-        
+        readD(); // dialog id
+        readQ();
     }
 
     @Override

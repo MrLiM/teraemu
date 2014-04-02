@@ -78,7 +78,9 @@ public class XMLService extends AbstractService {
         log.info("XMLService started");
     }
     
-    public void onDestroy() {}
+    public void onDestroy() {
+        this.cache.clear();
+    }
     
     public void readXMLData(Class<? extends AbstractXMLEntity> entityClass, File xml) {
         if (!xml.exists()) {

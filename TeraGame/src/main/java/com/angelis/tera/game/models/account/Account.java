@@ -28,11 +28,11 @@ public class Account extends AbstractModel {
     private Options options;
     
     public Account(Integer id) {
-        super(id);
+        super(id, null);
     }
     
     public Account() {
-        super();
+        super(null, null);
     }
 
     public String getLogin() {

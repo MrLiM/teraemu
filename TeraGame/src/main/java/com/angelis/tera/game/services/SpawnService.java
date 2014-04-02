@@ -7,15 +7,15 @@ import javolution.util.FastList;
 
 import org.apache.log4j.Logger;
 
-import com.angelis.tera.game.models.Creature;
 import com.angelis.tera.game.models.CreatureCurrentStats;
 import com.angelis.tera.game.models.Gather;
 import com.angelis.tera.game.models.TeraCreature;
 import com.angelis.tera.game.models.WorldPosition;
-import com.angelis.tera.game.models.enums.ObjectFamilyEnum;
+import com.angelis.tera.game.models.creature.CreatureTemplate;
 import com.angelis.tera.game.xml.entity.CreatureEntity;
 import com.angelis.tera.game.xml.entity.CreatureEntityHolder;
 import com.angelis.tera.game.xml.entity.CreatureSpawnEntity;
+import com.angelis.tera.game.xml.entity.CreatureTemplateEntity;
 import com.angelis.tera.game.xml.entity.GatherEntity;
 import com.angelis.tera.game.xml.entity.GatherEntityHolder;
 import com.angelis.tera.game.xml.entity.SpawnEntity;
@@ -38,17 +38,29 @@ public class SpawnService extends AbstractService {
         // TODO this should be done in mapper !!!!
         Set<CreatureEntity> creatureEntities = XMLService.getInstance().getEntity(CreatureEntityHolder.class).getCreatures();
         for (CreatureEntity creatureEntity : creatureEntities) {
-            for (CreatureSpawnEntity spawnEntity : creatureEntity.getSpawns()) {
+            for (CreatureSpawnEntity spawnEntity : creatureEntity.getCreatureSpawns()) {
                 TeraCreature teraCreature = new TeraCreature(creatureEntity.getId());
                 teraCreature.setCreatureType(creatureEntity.getCreatureType());
                 teraCreature.setModelId(creatureEntity.getModelId());
                 teraCreature.setAggresive(creatureEntity.isInoffensive() == 0);
                 
+                // Stats
                 CreatureCurrentStats creatureCurrentStats = new CreatureCurrentStats();
                 creatureCurrentStats.setSpeed(creatureEntity.getSpeed());
                 teraCreature.setCreatureCurrentStats(creatureCurrentStats);
                 
+                
+                // World position
                 teraCreature.setWorldPosition(new WorldPosition(spawnEntity.getMapId(), spawnEntity.getX(), spawnEntity.getY(), spawnEntity.getZ(), spawnEntity.getHeading()));
+                
+                // Template
+                CreatureTemplate creatureTemplate = new CreatureTemplate();
+                final CreatureTemplateEntity creatureEntityTemplate = creatureEntity.getCreatureTemplate();
+                if (creatureEntityTemplate != null) {
+                    creatureTemplate.setCreatureTitle(creatureEntityTemplate.getCreatureTitle());
+                    creatureTemplate.setHuntingZoneId(creatureEntityTemplate.getHuntingZoneId());
+                }
+                teraCreature.setCreatureTemplate(creatureTemplate);
                 creatures.add(teraCreature);
             }
         }
@@ -69,8 +81,8 @@ public class SpawnService extends AbstractService {
     public void onDestroy() {
     }
     
-    public List<Creature> getCreaturesByMapId(int mapId) {
-        List<Creature> creatures = new FastList<>();
+    public List<TeraCreature> getCreaturesByMapId(int mapId) {
+        List<TeraCreature> creatures = new FastList<>();
         for (TeraCreature teraCreature : this.creatures) {
             if (teraCreature.getWorldPosition().getMapId() == mapId) {
                 creatures.add(teraCreature);
@@ -89,8 +101,8 @@ public class SpawnService extends AbstractService {
         return gathers;
     }
     
-    public Creature getCreatureByUid(int creatureUId) {
-        Creature creature = null;
+    public TeraCreature getCreatureByUid(int creatureUId) {
+        TeraCreature creature = null;
         for (TeraCreature teraCreature : this.creatures) {
             if (teraCreature.getUid() == creatureUId) {
                 creature = teraCreature;

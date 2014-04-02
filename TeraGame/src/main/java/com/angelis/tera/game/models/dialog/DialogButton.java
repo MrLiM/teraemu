@@ -6,7 +6,7 @@ import com.angelis.tera.game.models.dialog.enums.DialogStringEnum;
 
 public class DialogButton {
     public final DialogIconEnum dialogIcon;
-    public String text;
+    public final String text;
     
     public DialogButton(DialogIconEnum dialogIcon, String text) {
         this.dialogIcon = dialogIcon;
@@ -21,5 +21,13 @@ public class DialogButton {
     public DialogButton(DialogIconEnum dialogIcon, DialogQuestEnum dialogQuest) {
         this.dialogIcon = dialogIcon;
         this.text = "@quest:"+dialogQuest.value;
+    }
+
+    public DialogIconEnum getDialogIcon() {
+        return dialogIcon;
+    }
+
+    public String getText() {
+        return text;
     }
 }
